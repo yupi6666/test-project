@@ -4,21 +4,24 @@
   "description": "智能任务管理系统 - Node.js + React + Supabase",
   "main": "server.js",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"vite\"",
     "server": "nodemon server.js",
-    "client": "cd client && npm run dev",
-    "build": "cd client && npm run build",
+    "build": "vite build",
     "start": "node server.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.47.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
     "concurrently": "^9.1.0",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "vite": "^5.4.11"
   },
   "engines": {
     "node": ">=18.0.0"
